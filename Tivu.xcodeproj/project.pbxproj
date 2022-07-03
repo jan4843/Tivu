@@ -1,0 +1,953 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D0F07DF286608F900CBA154 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F07DE286608F900CBA154 /* Settings.swift */; };
+		3D0F07E128664F7E00CBA154 /* TVHeadendServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F07E028664F7E00CBA154 /* TVHeadendServer.swift */; };
+		3D0F07E328664FFB00CBA154 /* URL+BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F07E228664FFB00CBA154 /* URL+BasicAuth.swift */; };
+		3D0F07E52866540800CBA154 /* SettingsView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0F07E42866540800CBA154 /* SettingsView+ViewModel.swift */; };
+		3D149DCF284BE0F300F6F228 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D149DCE284BE0F300F6F228 /* DataManager.swift */; };
+		3D1EDD54284CD9ED004854E2 /* Program+Formatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1EDD53284CD9ED004854E2 /* Program+Formatted.swift */; };
+		3D2201B228685CAA00C8EA68 /* URL+PathComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2201B128685CAA00C8EA68 /* URL+PathComponents.swift */; };
+		3D2201B828685DB500C8EA68 /* TVHeadendServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2201B728685DB500C8EA68 /* TVHeadendServerTests.swift */; };
+		3D4E2391286B2B1000ABA96E /* NowPlayingPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E2390286B2B1000ABA96E /* NowPlayingPill.swift */; };
+		3D4E2393286B309200ABA96E /* CachedProgram+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E2392286B309200ABA96E /* CachedProgram+FetchRequests.swift */; };
+		3D4E2395286B30AC00ABA96E /* CachedChannel+FetchRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E2394286B30AC00ABA96E /* CachedChannel+FetchRequests.swift */; };
+		3D4E2397286B359100ABA96E /* NowPlayingPill+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E2396286B359100ABA96E /* NowPlayingPill+ViewModel.swift */; };
+		3D4E2399286B429C00ABA96E /* Binding+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E2398286B429C00ABA96E /* Binding+Optional.swift */; };
+		3D4E239B286B42F700ABA96E /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E239A286B42F700ABA96E /* FormField.swift */; };
+		3D4E239F286B4F9E00ABA96E /* ChannelView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E239E286B4F9E00ABA96E /* ChannelView+ViewModel.swift */; };
+		3D4E23A1286B74AC00ABA96E /* Fetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E23A0286B74AC00ABA96E /* Fetchable.swift */; };
+		3D4E23A3286B759D00ABA96E /* ChannelsListView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E23A2286B759D00ABA96E /* ChannelsListView+ViewModel.swift */; };
+		3D4E23A5286B75C200ABA96E /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E23A4286B75C200ABA96E /* Persistable.swift */; };
+		3D4E23A7286B7FBC00ABA96E /* DateInterval+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E23A6286B7FBC00ABA96E /* DateInterval+Progress.swift */; };
+		3D753E95286A80F7009E7D3B /* NSManagedObjectContext+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D753E94286A80F7009E7D3B /* NSManagedObjectContext+Merge.swift */; };
+		3D7E77CC283F7EDF00CBAA23 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E77CB283F7EDF00CBAA23 /* Channel.swift */; };
+		3D7E77CE283F7EFA00CBAA23 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E77CD283F7EFA00CBAA23 /* Program.swift */; };
+		3D7E77D2283F7F2B00CBAA23 /* Program+XMLTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E77D1283F7F2B00CBAA23 /* Program+XMLTV.swift */; };
+		3D7E77DA283F83FD00CBAA23 /* Channel+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E77D9283F83FD00CBAA23 /* Channel+Persistence.swift */; };
+		3D7E77DC283F890C00CBAA23 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E77DB283F890C00CBAA23 /* CacheManager.swift */; };
+		3D7E77DE283F90A500CBAA23 /* CacheManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E77DD283F90A500CBAA23 /* CacheManagerTests.swift */; };
+		3D7E77E02841161F00CBAA23 /* Program+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E77DF2841161F00CBAA23 /* Program+Persistence.swift */; };
+		3D944D1828423E69006E80CB /* ProgramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D944D1728423E69006E80CB /* ProgramTests.swift */; };
+		3D944D1B284255AE006E80CB /* ProgramCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D944D1A284255AE006E80CB /* ProgramCard.swift */; };
+		3D944D1F284378AB006E80CB /* ChannelsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D944D1E284378AB006E80CB /* ChannelsListView.swift */; };
+		3D944D5E28438107006E80CB /* ChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D944D5D28438107006E80CB /* ChannelView.swift */; };
+		3D944D6028439478006E80CB /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D944D5F28439478006E80CB /* CachedImage.swift */; };
+		3D9A59EF2843F60F00D2DD66 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A59EE2843F60F00D2DD66 /* AudioToolbox.framework */; };
+		3D9A59F12843F61500D2DD66 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A59F02843F61500D2DD66 /* AVFoundation.framework */; };
+		3D9A59F32843F61B00D2DD66 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A59F22843F61B00D2DD66 /* CFNetwork.framework */; };
+		3D9A59F52843F61F00D2DD66 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A59F42843F61F00D2DD66 /* CoreFoundation.framework */; };
+		3D9A59F72843F62400D2DD66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A59F62843F62400D2DD66 /* CoreGraphics.framework */; };
+		3D9A59F92843F62900D2DD66 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A59F82843F62900D2DD66 /* CoreMedia.framework */; };
+		3D9A59FB2843F62D00D2DD66 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A59FA2843F62D00D2DD66 /* CoreText.framework */; };
+		3D9A59FD2843F63100D2DD66 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A59FC2843F63100D2DD66 /* CoreVideo.framework */; };
+		3D9A59FF2843F63800D2DD66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A59FE2843F63800D2DD66 /* Foundation.framework */; };
+		3D9A5A012843F63D00D2DD66 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A5A002843F63D00D2DD66 /* libbz2.tbd */; };
+		3D9A5A032843F64200D2DD66 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A5A022843F64200D2DD66 /* libc++.tbd */; };
+		3D9A5A052843F64700D2DD66 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A5A042843F64700D2DD66 /* libiconv.tbd */; };
+		3D9A5A072843F64C00D2DD66 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A5A062843F64C00D2DD66 /* libxml2.tbd */; };
+		3D9A5A0B2843F65500D2DD66 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A5A0A2843F65500D2DD66 /* QuartzCore.framework */; };
+		3D9A5A0D2843F65900D2DD66 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A5A0C2843F65900D2DD66 /* Security.framework */; };
+		3D9A5A0F2843F65D00D2DD66 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A5A0E2843F65D00D2DD66 /* VideoToolbox.framework */; };
+		3D9A5A112843F66200D2DD66 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9A5A102843F66200D2DD66 /* UIKit.framework */; };
+		3D9A5A172843F95100D2DD66 /* Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D9A5A162843F95100D2DD66 /* Bridging-Header.h */; };
+		3DA406372843FF4A00935D7A /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA406362843FF4A00935D7A /* VideoView.swift */; };
+		3DA406392844022A00935D7A /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA406382844022A00935D7A /* PlayerView.swift */; };
+		3DABDBCE2870760E0047C6DF /* Date+Within.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DABDBCD2870760E0047C6DF /* Date+Within.swift */; };
+		3DB7A5132870608C00C9427B /* Date+Formatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB7A5122870608C00C9427B /* Date+Formatted.swift */; };
+		3DE363E72843C1780004C325 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE363E62843C1780004C325 /* SettingsView.swift */; };
+		3DE9401F283EB6C10051FECD /* TivuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9401E283EB6C10051FECD /* TivuApp.swift */; };
+		3DE94021283EB6C10051FECD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE94020283EB6C10051FECD /* ContentView.swift */; };
+		3DE94023283EB6C20051FECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE94022283EB6C20051FECD /* Assets.xcassets */; };
+		3DE9402B283EB6C20051FECD /* Tivu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DE94029283EB6C20051FECD /* Tivu.xcdatamodeld */; };
+		3DE9404E283EB7130051FECD /* XMLTVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9404D283EB7130051FECD /* XMLTVParser.swift */; };
+		3DE94050283EB7320051FECD /* XMLTVParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE9404F283EB7320051FECD /* XMLTVParserTests.swift */; };
+		4A405BE7D1290C59D3DB6B09 /* Pods_Tivu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35E9F7A68FC872FBDFE5263C /* Pods_Tivu.framework */; };
+		AA38F01AFEA0049478C58FB9 /* Pods_TivuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285CFA87B8E64C1361B3B11F /* Pods_TivuTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DE94031283EB6C20051FECD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE94013283EB6C10051FECD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE9401A283EB6C10051FECD;
+			remoteInfo = Tivu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FF043395B53FE41BDD6504D /* Pods-Tivu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tivu.release.xcconfig"; path = "Target Support Files/Pods-Tivu/Pods-Tivu.release.xcconfig"; sourceTree = "<group>"; };
+		285CFA87B8E64C1361B3B11F /* Pods_TivuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TivuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35E9F7A68FC872FBDFE5263C /* Pods_Tivu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tivu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D0F07DE286608F900CBA154 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		3D0F07E028664F7E00CBA154 /* TVHeadendServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVHeadendServer.swift; sourceTree = "<group>"; };
+		3D0F07E228664FFB00CBA154 /* URL+BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+BasicAuth.swift"; sourceTree = "<group>"; };
+		3D0F07E42866540800CBA154 /* SettingsView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsView+ViewModel.swift"; sourceTree = "<group>"; };
+		3D149DCE284BE0F300F6F228 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3D1EDD53284CD9ED004854E2 /* Program+Formatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Program+Formatted.swift"; sourceTree = "<group>"; };
+		3D2201B128685CAA00C8EA68 /* URL+PathComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+PathComponents.swift"; sourceTree = "<group>"; };
+		3D2201B728685DB500C8EA68 /* TVHeadendServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVHeadendServerTests.swift; sourceTree = "<group>"; };
+		3D4E2390286B2B1000ABA96E /* NowPlayingPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingPill.swift; sourceTree = "<group>"; };
+		3D4E2392286B309200ABA96E /* CachedProgram+FetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedProgram+FetchRequests.swift"; sourceTree = "<group>"; };
+		3D4E2394286B30AC00ABA96E /* CachedChannel+FetchRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedChannel+FetchRequests.swift"; sourceTree = "<group>"; };
+		3D4E2396286B359100ABA96E /* NowPlayingPill+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NowPlayingPill+ViewModel.swift"; sourceTree = "<group>"; };
+		3D4E2398286B429C00ABA96E /* Binding+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Optional.swift"; sourceTree = "<group>"; };
+		3D4E239A286B42F700ABA96E /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
+		3D4E239E286B4F9E00ABA96E /* ChannelView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChannelView+ViewModel.swift"; sourceTree = "<group>"; };
+		3D4E23A0286B74AC00ABA96E /* Fetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetchable.swift; sourceTree = "<group>"; };
+		3D4E23A2286B759D00ABA96E /* ChannelsListView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChannelsListView+ViewModel.swift"; sourceTree = "<group>"; };
+		3D4E23A4286B75C200ABA96E /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		3D4E23A6286B7FBC00ABA96E /* DateInterval+Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateInterval+Progress.swift"; sourceTree = "<group>"; };
+		3D753E94286A80F7009E7D3B /* NSManagedObjectContext+Merge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Merge.swift"; sourceTree = "<group>"; };
+		3D7E77CB283F7EDF00CBAA23 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		3D7E77CD283F7EFA00CBAA23 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		3D7E77D1283F7F2B00CBAA23 /* Program+XMLTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Program+XMLTV.swift"; sourceTree = "<group>"; };
+		3D7E77D9283F83FD00CBAA23 /* Channel+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channel+Persistence.swift"; sourceTree = "<group>"; };
+		3D7E77DB283F890C00CBAA23 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		3D7E77DD283F90A500CBAA23 /* CacheManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerTests.swift; sourceTree = "<group>"; };
+		3D7E77DF2841161F00CBAA23 /* Program+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Program+Persistence.swift"; sourceTree = "<group>"; };
+		3D944D1728423E69006E80CB /* ProgramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTests.swift; sourceTree = "<group>"; };
+		3D944D1A284255AE006E80CB /* ProgramCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCard.swift; sourceTree = "<group>"; };
+		3D944D1E284378AB006E80CB /* ChannelsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsListView.swift; sourceTree = "<group>"; };
+		3D944D5D28438107006E80CB /* ChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelView.swift; sourceTree = "<group>"; };
+		3D944D5F28439478006E80CB /* CachedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImage.swift; sourceTree = "<group>"; };
+		3D944D6128439EF7006E80CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3D9A59EE2843F60F00D2DD66 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		3D9A59F02843F61500D2DD66 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3D9A59F22843F61B00D2DD66 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3D9A59F42843F61F00D2DD66 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		3D9A59F62843F62400D2DD66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D9A59F82843F62900D2DD66 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3D9A59FA2843F62D00D2DD66 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		3D9A59FC2843F63100D2DD66 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		3D9A59FE2843F63800D2DD66 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D9A5A002843F63D00D2DD66 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		3D9A5A022843F64200D2DD66 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		3D9A5A042843F64700D2DD66 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		3D9A5A062843F64C00D2DD66 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		3D9A5A082843F65000D2DD66 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3D9A5A0A2843F65500D2DD66 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3D9A5A0C2843F65900D2DD66 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3D9A5A0E2843F65D00D2DD66 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		3D9A5A102843F66200D2DD66 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D9A5A162843F95100D2DD66 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		3DA406362843FF4A00935D7A /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		3DA406382844022A00935D7A /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		3DABDBCD2870760E0047C6DF /* Date+Within.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Within.swift"; sourceTree = "<group>"; };
+		3DB7A5122870608C00C9427B /* Date+Formatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatted.swift"; sourceTree = "<group>"; };
+		3DE363E62843C1780004C325 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3DE9401B283EB6C10051FECD /* Tivu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tivu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE9401E283EB6C10051FECD /* TivuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TivuApp.swift; sourceTree = "<group>"; };
+		3DE94020283EB6C10051FECD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3DE94022283EB6C20051FECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DE9402A283EB6C20051FECD /* Tivu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tivu.xcdatamodel; sourceTree = "<group>"; };
+		3DE94030283EB6C20051FECD /* TivuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TivuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE9404D283EB7130051FECD /* XMLTVParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLTVParser.swift; sourceTree = "<group>"; };
+		3DE9404F283EB7320051FECD /* XMLTVParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLTVParserTests.swift; sourceTree = "<group>"; };
+		51B44C08A98D23EC80817C92 /* Pods-Tivu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tivu.debug.xcconfig"; path = "Target Support Files/Pods-Tivu/Pods-Tivu.debug.xcconfig"; sourceTree = "<group>"; };
+		6838CE8BEF9376A02C451640 /* Pods-TivuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TivuTests.release.xcconfig"; path = "Target Support Files/Pods-TivuTests/Pods-TivuTests.release.xcconfig"; sourceTree = "<group>"; };
+		C7C5C641085E7E335C5DA1CD /* Pods-TivuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TivuTests.debug.xcconfig"; path = "Target Support Files/Pods-TivuTests/Pods-TivuTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DE94018283EB6C10051FECD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D9A5A112843F66200D2DD66 /* UIKit.framework in Frameworks */,
+				3D9A5A0F2843F65D00D2DD66 /* VideoToolbox.framework in Frameworks */,
+				3D9A5A0D2843F65900D2DD66 /* Security.framework in Frameworks */,
+				3D9A5A0B2843F65500D2DD66 /* QuartzCore.framework in Frameworks */,
+				3D9A5A072843F64C00D2DD66 /* libxml2.tbd in Frameworks */,
+				3D9A5A052843F64700D2DD66 /* libiconv.tbd in Frameworks */,
+				3D9A5A032843F64200D2DD66 /* libc++.tbd in Frameworks */,
+				3D9A5A012843F63D00D2DD66 /* libbz2.tbd in Frameworks */,
+				3D9A59FF2843F63800D2DD66 /* Foundation.framework in Frameworks */,
+				3D9A59FD2843F63100D2DD66 /* CoreVideo.framework in Frameworks */,
+				3D9A59FB2843F62D00D2DD66 /* CoreText.framework in Frameworks */,
+				3D9A59F92843F62900D2DD66 /* CoreMedia.framework in Frameworks */,
+				3D9A59F72843F62400D2DD66 /* CoreGraphics.framework in Frameworks */,
+				3D9A59F52843F61F00D2DD66 /* CoreFoundation.framework in Frameworks */,
+				3D9A59F32843F61B00D2DD66 /* CFNetwork.framework in Frameworks */,
+				3D9A59F12843F61500D2DD66 /* AVFoundation.framework in Frameworks */,
+				3D9A59EF2843F60F00D2DD66 /* AudioToolbox.framework in Frameworks */,
+				4A405BE7D1290C59D3DB6B09 /* Pods_Tivu.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE9402D283EB6C20051FECD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA38F01AFEA0049478C58FB9 /* Pods_TivuTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D2201B028685C6400C8EA68 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D4E2398286B429C00ABA96E /* Binding+Optional.swift */,
+				3D4E23A6286B7FBC00ABA96E /* DateInterval+Progress.swift */,
+				3D753E94286A80F7009E7D3B /* NSManagedObjectContext+Merge.swift */,
+				3D0F07E228664FFB00CBA154 /* URL+BasicAuth.swift */,
+				3D2201B128685CAA00C8EA68 /* URL+PathComponents.swift */,
+				3DABDBCD2870760E0047C6DF /* Date+Within.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D2201B328685CE300C8EA68 /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				3D2201B428685CF400C8EA68 /* TVHeadend */,
+				3DE94051283EEA2B0051FECD /* XMLTV */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		3D2201B428685CF400C8EA68 /* TVHeadend */ = {
+			isa = PBXGroup;
+			children = (
+				3D0F07E028664F7E00CBA154 /* TVHeadendServer.swift */,
+			);
+			path = TVHeadend;
+			sourceTree = "<group>";
+		};
+		3D2201B528685D8600C8EA68 /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				3D2201B628685D8F00C8EA68 /* TVHeadend */,
+				3D7E77D8283F835A00CBAA23 /* XMLTV */,
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
+		3D2201B628685D8F00C8EA68 /* TVHeadend */ = {
+			isa = PBXGroup;
+			children = (
+				3D2201B728685DB500C8EA68 /* TVHeadendServerTests.swift */,
+			);
+			path = TVHeadend;
+			sourceTree = "<group>";
+		};
+		3D7E77CA283F7ECF00CBAA23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D7E77CB283F7EDF00CBAA23 /* Channel.swift */,
+				3D7E77CD283F7EFA00CBAA23 /* Program.swift */,
+				3D0F07DE286608F900CBA154 /* Settings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D7E77D7283F80E600CBAA23 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				3DE94029283EB6C20051FECD /* Tivu.xcdatamodeld */,
+				3D149DCE284BE0F300F6F228 /* DataManager.swift */,
+				3D7E77DB283F890C00CBAA23 /* CacheManager.swift */,
+				3D4E23A0286B74AC00ABA96E /* Fetchable.swift */,
+				3D4E23A4286B75C200ABA96E /* Persistable.swift */,
+				3DB7A51128705E3600C9427B /* Extensions */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		3D7E77D8283F835A00CBAA23 /* XMLTV */ = {
+			isa = PBXGroup;
+			children = (
+				3DE9404F283EB7320051FECD /* XMLTVParserTests.swift */,
+				3D944D1728423E69006E80CB /* ProgramTests.swift */,
+			);
+			path = XMLTV;
+			sourceTree = "<group>";
+		};
+		3D89E7C02848092F00E1F1CC /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				3D944D5F28439478006E80CB /* CachedImage.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		3D944D1628422FEE006E80CB /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				3D7E77DD283F90A500CBAA23 /* CacheManagerTests.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		3D944D192842555C006E80CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DE94020283EB6C10051FECD /* ContentView.swift */,
+				3DB7A50F28705D2C00C9427B /* Navigation */,
+				3DB7A50E2870432B00C9427B /* Settings */,
+				3DB7A50D2870429A00C9427B /* Player */,
+				3D89E7C02848092F00E1F1CC /* Generic */,
+				3DB7A51028705D6300C9427B /* Extensions */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3DB7A50D2870429A00C9427B /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				3DA406382844022A00935D7A /* PlayerView.swift */,
+				3D4E2390286B2B1000ABA96E /* NowPlayingPill.swift */,
+				3D4E2396286B359100ABA96E /* NowPlayingPill+ViewModel.swift */,
+				3DA406362843FF4A00935D7A /* VideoView.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		3DB7A50E2870432B00C9427B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3DE363E62843C1780004C325 /* SettingsView.swift */,
+				3D0F07E42866540800CBA154 /* SettingsView+ViewModel.swift */,
+				3D4E239A286B42F700ABA96E /* FormField.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3DB7A50F28705D2C00C9427B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				3D944D1E284378AB006E80CB /* ChannelsListView.swift */,
+				3D4E23A2286B759D00ABA96E /* ChannelsListView+ViewModel.swift */,
+				3D944D5D28438107006E80CB /* ChannelView.swift */,
+				3D4E239E286B4F9E00ABA96E /* ChannelView+ViewModel.swift */,
+				3D944D1A284255AE006E80CB /* ProgramCard.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		3DB7A51028705D6300C9427B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D1EDD53284CD9ED004854E2 /* Program+Formatted.swift */,
+				3DB7A5122870608C00C9427B /* Date+Formatted.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3DB7A51128705E3600C9427B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D7E77D9283F83FD00CBAA23 /* Channel+Persistence.swift */,
+				3D7E77DF2841161F00CBAA23 /* Program+Persistence.swift */,
+				3D4E2394286B30AC00ABA96E /* CachedChannel+FetchRequests.swift */,
+				3D4E2392286B309200ABA96E /* CachedProgram+FetchRequests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3DE94012283EB6C10051FECD = {
+			isa = PBXGroup;
+			children = (
+				3DE9401D283EB6C10051FECD /* Tivu */,
+				3DE94033283EB6C20051FECD /* TivuTests */,
+				3DE9401C283EB6C10051FECD /* Products */,
+				ABEA2A5C7704B596F1428687 /* Pods */,
+				BACC644465788EDE9223331A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3DE9401C283EB6C10051FECD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DE9401B283EB6C10051FECD /* Tivu.app */,
+				3DE94030283EB6C20051FECD /* TivuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DE9401D283EB6C10051FECD /* Tivu */ = {
+			isa = PBXGroup;
+			children = (
+				3D944D6128439EF7006E80CB /* Info.plist */,
+				3D9A5A162843F95100D2DD66 /* Bridging-Header.h */,
+				3DE94022283EB6C20051FECD /* Assets.xcassets */,
+				3DE9401E283EB6C10051FECD /* TivuApp.swift */,
+				3D7E77CA283F7ECF00CBAA23 /* Models */,
+				3D944D192842555C006E80CB /* Views */,
+				3D7E77D7283F80E600CBAA23 /* Persistence */,
+				3D2201B328685CE300C8EA68 /* Domains */,
+				3D2201B028685C6400C8EA68 /* Extensions */,
+			);
+			path = Tivu;
+			sourceTree = "<group>";
+		};
+		3DE94033283EB6C20051FECD /* TivuTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D944D1628422FEE006E80CB /* Persistence */,
+				3D2201B528685D8600C8EA68 /* Domains */,
+			);
+			path = TivuTests;
+			sourceTree = "<group>";
+		};
+		3DE94051283EEA2B0051FECD /* XMLTV */ = {
+			isa = PBXGroup;
+			children = (
+				3DE9404D283EB7130051FECD /* XMLTVParser.swift */,
+				3D7E77D1283F7F2B00CBAA23 /* Program+XMLTV.swift */,
+			);
+			path = XMLTV;
+			sourceTree = "<group>";
+		};
+		ABEA2A5C7704B596F1428687 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51B44C08A98D23EC80817C92 /* Pods-Tivu.debug.xcconfig */,
+				1FF043395B53FE41BDD6504D /* Pods-Tivu.release.xcconfig */,
+				C7C5C641085E7E335C5DA1CD /* Pods-TivuTests.debug.xcconfig */,
+				6838CE8BEF9376A02C451640 /* Pods-TivuTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BACC644465788EDE9223331A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D9A5A102843F66200D2DD66 /* UIKit.framework */,
+				3D9A5A0E2843F65D00D2DD66 /* VideoToolbox.framework */,
+				3D9A5A0C2843F65900D2DD66 /* Security.framework */,
+				3D9A5A0A2843F65500D2DD66 /* QuartzCore.framework */,
+				3D9A5A082843F65000D2DD66 /* OpenGLES.framework */,
+				3D9A5A062843F64C00D2DD66 /* libxml2.tbd */,
+				3D9A5A042843F64700D2DD66 /* libiconv.tbd */,
+				3D9A5A022843F64200D2DD66 /* libc++.tbd */,
+				3D9A5A002843F63D00D2DD66 /* libbz2.tbd */,
+				3D9A59FE2843F63800D2DD66 /* Foundation.framework */,
+				3D9A59FC2843F63100D2DD66 /* CoreVideo.framework */,
+				3D9A59FA2843F62D00D2DD66 /* CoreText.framework */,
+				3D9A59F82843F62900D2DD66 /* CoreMedia.framework */,
+				3D9A59F62843F62400D2DD66 /* CoreGraphics.framework */,
+				3D9A59F42843F61F00D2DD66 /* CoreFoundation.framework */,
+				3D9A59F22843F61B00D2DD66 /* CFNetwork.framework */,
+				3D9A59F02843F61500D2DD66 /* AVFoundation.framework */,
+				3D9A59EE2843F60F00D2DD66 /* AudioToolbox.framework */,
+				35E9F7A68FC872FBDFE5263C /* Pods_Tivu.framework */,
+				285CFA87B8E64C1361B3B11F /* Pods_TivuTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DE9401A283EB6C10051FECD /* Tivu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE94044283EB6C20051FECD /* Build configuration list for PBXNativeTarget "Tivu" */;
+			buildPhases = (
+				D676643826696F183A80B4D3 /* [CP] Check Pods Manifest.lock */,
+				3DE94017283EB6C10051FECD /* Sources */,
+				3DE94018283EB6C10051FECD /* Frameworks */,
+				3DE94019283EB6C10051FECD /* Resources */,
+				13E8CD1C7B068CCFAA8AF46B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tivu;
+			productName = Tivu;
+			productReference = 3DE9401B283EB6C10051FECD /* Tivu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DE9402F283EB6C20051FECD /* TivuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE94047283EB6C20051FECD /* Build configuration list for PBXNativeTarget "TivuTests" */;
+			buildPhases = (
+				2DDCE974B4CA777BEF91D0E3 /* [CP] Check Pods Manifest.lock */,
+				3DE9402C283EB6C20051FECD /* Sources */,
+				3DE9402D283EB6C20051FECD /* Frameworks */,
+				3DE9402E283EB6C20051FECD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DE94032283EB6C20051FECD /* PBXTargetDependency */,
+			);
+			name = TivuTests;
+			productName = TivuTests;
+			productReference = 3DE94030283EB6C20051FECD /* TivuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DE94013283EB6C10051FECD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					3DE9401A283EB6C10051FECD = {
+						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
+					};
+					3DE9402F283EB6C20051FECD = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 3DE9401A283EB6C10051FECD;
+					};
+				};
+			};
+			buildConfigurationList = 3DE94016283EB6C10051FECD /* Build configuration list for PBXProject "Tivu" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DE94012283EB6C10051FECD;
+			productRefGroup = 3DE9401C283EB6C10051FECD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DE9401A283EB6C10051FECD /* Tivu */,
+				3DE9402F283EB6C20051FECD /* TivuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DE94019283EB6C10051FECD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE94023283EB6C20051FECD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE9402E283EB6C20051FECD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13E8CD1C7B068CCFAA8AF46B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tivu/Pods-Tivu-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tivu/Pods-Tivu-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tivu/Pods-Tivu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DDCE974B4CA777BEF91D0E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TivuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D676643826696F183A80B4D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tivu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DE94017283EB6C10051FECD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D753E95286A80F7009E7D3B /* NSManagedObjectContext+Merge.swift in Sources */,
+				3D7E77E02841161F00CBAA23 /* Program+Persistence.swift in Sources */,
+				3D0F07E328664FFB00CBA154 /* URL+BasicAuth.swift in Sources */,
+				3D944D6028439478006E80CB /* CachedImage.swift in Sources */,
+				3D4E239B286B42F700ABA96E /* FormField.swift in Sources */,
+				3DE363E72843C1780004C325 /* SettingsView.swift in Sources */,
+				3DA406372843FF4A00935D7A /* VideoView.swift in Sources */,
+				3D4E23A3286B759D00ABA96E /* ChannelsListView+ViewModel.swift in Sources */,
+				3DABDBCE2870760E0047C6DF /* Date+Within.swift in Sources */,
+				3D2201B228685CAA00C8EA68 /* URL+PathComponents.swift in Sources */,
+				3D4E239F286B4F9E00ABA96E /* ChannelView+ViewModel.swift in Sources */,
+				3D4E2399286B429C00ABA96E /* Binding+Optional.swift in Sources */,
+				3D7E77CE283F7EFA00CBAA23 /* Program.swift in Sources */,
+				3D7E77CC283F7EDF00CBAA23 /* Channel.swift in Sources */,
+				3DE9404E283EB7130051FECD /* XMLTVParser.swift in Sources */,
+				3D0F07DF286608F900CBA154 /* Settings.swift in Sources */,
+				3D4E2391286B2B1000ABA96E /* NowPlayingPill.swift in Sources */,
+				3D944D1B284255AE006E80CB /* ProgramCard.swift in Sources */,
+				3DA406392844022A00935D7A /* PlayerView.swift in Sources */,
+				3D1EDD54284CD9ED004854E2 /* Program+Formatted.swift in Sources */,
+				3D7E77DA283F83FD00CBAA23 /* Channel+Persistence.swift in Sources */,
+				3D7E77DC283F890C00CBAA23 /* CacheManager.swift in Sources */,
+				3D4E2397286B359100ABA96E /* NowPlayingPill+ViewModel.swift in Sources */,
+				3DE9402B283EB6C20051FECD /* Tivu.xcdatamodeld in Sources */,
+				3DE94021283EB6C10051FECD /* ContentView.swift in Sources */,
+				3D944D5E28438107006E80CB /* ChannelView.swift in Sources */,
+				3D4E2393286B309200ABA96E /* CachedProgram+FetchRequests.swift in Sources */,
+				3D149DCF284BE0F300F6F228 /* DataManager.swift in Sources */,
+				3D0F07E128664F7E00CBA154 /* TVHeadendServer.swift in Sources */,
+				3DB7A5132870608C00C9427B /* Date+Formatted.swift in Sources */,
+				3D4E23A1286B74AC00ABA96E /* Fetchable.swift in Sources */,
+				3D0F07E52866540800CBA154 /* SettingsView+ViewModel.swift in Sources */,
+				3D4E23A5286B75C200ABA96E /* Persistable.swift in Sources */,
+				3D4E2395286B30AC00ABA96E /* CachedChannel+FetchRequests.swift in Sources */,
+				3D7E77D2283F7F2B00CBAA23 /* Program+XMLTV.swift in Sources */,
+				3DE9401F283EB6C10051FECD /* TivuApp.swift in Sources */,
+				3D9A5A172843F95100D2DD66 /* Bridging-Header.h in Sources */,
+				3D4E23A7286B7FBC00ABA96E /* DateInterval+Progress.swift in Sources */,
+				3D944D1F284378AB006E80CB /* ChannelsListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE9402C283EB6C20051FECD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2201B828685DB500C8EA68 /* TVHeadendServerTests.swift in Sources */,
+				3D944D1828423E69006E80CB /* ProgramTests.swift in Sources */,
+				3DE94050283EB7320051FECD /* XMLTVParserTests.swift in Sources */,
+				3D7E77DE283F90A500CBAA23 /* CacheManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DE94032283EB6C20051FECD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DE9401A283EB6C10051FECD /* Tivu */;
+			targetProxy = 3DE94031283EB6C20051FECD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3DE94042283EB6C20051FECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3DE94043283EB6C20051FECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DE94045283EB6C20051FECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B44C08A98D23EC80817C92 /* Pods-Tivu.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VUXB5VQ96M;
+				ENABLE_BITCODE = NO;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tivu/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janvitturi.Tivu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tivu/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3DE94046283EB6C20051FECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FF043395B53FE41BDD6504D /* Pods-Tivu.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VUXB5VQ96M;
+				ENABLE_BITCODE = NO;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Tivu/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janvitturi.Tivu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tivu/Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3DE94048283EB6C20051FECD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C5C641085E7E335C5DA1CD /* Pods-TivuTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VUXB5VQ96M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janvitturi.TivuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tivu.app/Tivu";
+			};
+			name = Debug;
+		};
+		3DE94049283EB6C20051FECD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6838CE8BEF9376A02C451640 /* Pods-TivuTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VUXB5VQ96M;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janvitturi.TivuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tivu.app/Tivu";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DE94016283EB6C10051FECD /* Build configuration list for PBXProject "Tivu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE94042283EB6C20051FECD /* Debug */,
+				3DE94043283EB6C20051FECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE94044283EB6C20051FECD /* Build configuration list for PBXNativeTarget "Tivu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE94045283EB6C20051FECD /* Debug */,
+				3DE94046283EB6C20051FECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE94047283EB6C20051FECD /* Build configuration list for PBXNativeTarget "TivuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE94048283EB6C20051FECD /* Debug */,
+				3DE94049283EB6C20051FECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3DE94029283EB6C20051FECD /* Tivu.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3DE9402A283EB6C20051FECD /* Tivu.xcdatamodel */,
+			);
+			currentVersion = 3DE9402A283EB6C20051FECD /* Tivu.xcdatamodel */;
+			path = Tivu.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3DE94013283EB6C10051FECD /* Project object */;
+}

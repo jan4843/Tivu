@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CachedChannel" representedClassName="CachedChannel" parentEntity="CachedEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="logoURL" optional="YES" attributeType="URI"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="number" optional="YES" attributeType="String"/>
+        <fetchIndex name="byNumber">
+            <fetchIndexElement property="number" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CachedEntity" representedClassName="CachedEntity" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="stale" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <fetchIndex name="byStale">
+            <fetchIndexElement property="stale" type="Binary" order="ascending"/>
+        </fetchIndex>
+    </entity>
+    <entity name="CachedProgram" representedClassName="CachedProgram" parentEntity="CachedEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="channelID" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="endTime" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="imageURL" optional="YES" attributeType="URI"/>
+        <attribute name="number" optional="YES" attributeType="String"/>
+        <attribute name="startTime" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="subtitle" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <fetchIndex name="byStart">
+            <fetchIndexElement property="channelID" type="Binary" order="ascending"/>
+            <fetchIndexElement property="startTime" type="Binary" order="ascending"/>
+        </fetchIndex>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CachedChannel" positionX="-601.66796875" positionY="37.28515625" width="128" height="89"/>
+        <element name="CachedEntity" positionX="-345.75" positionY="-160.8828125" width="128" height="44"/>
+        <element name="CachedProgram" positionX="-310.79296875" positionY="114.91796875" width="128" height="164"/>
+    </elements>
+</model>
